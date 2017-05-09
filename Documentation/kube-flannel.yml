@@ -45,6 +45,9 @@ spec:
         tier: node
         app: flannel
     spec:
+      securityContext:
+        seLinuxOptions:
+          type: "spc_t"
       hostNetwork: true
       nodeSelector:
         beta.kubernetes.io/arch: amd64
